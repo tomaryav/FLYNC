@@ -13,7 +13,6 @@ def test_positive_controller_interface_config(
     embedded_metadata_entry,
 ):
     ctrl_interface = {
-        "name": "interface_test",
         "mac_address": "aa:bb:cc:dd:ee:ff",
         "virtual_interfaces": [virtual_controller_interface],
         "ptp_config": None,
@@ -33,7 +32,6 @@ def test_negative_controller_interface_wrong_mac(
     embedded_metadata_entry,
 ):
     ctrl_interface = {
-        "name": "interface_test",
         "mac_address": "aaa-bb-cc-dd-ee-ff",
         "virtual_interfaces": [virtual_controller_interface],
     }
@@ -52,7 +50,6 @@ def test_negative_controller_interface_missing_vifaces(
     embedded_metadata_entry,
 ):
     ctrl_interface = {
-        "name": "interface_test",
         "mac_address": "aa:bb:cc:dd:ee:ff",
     }
 
@@ -68,7 +65,6 @@ def test_negative_controller_interface_missing_vifaces(
 
 def test_negative_controller_interface_empty_vifaces(embedded_metadata_entry):
     ctrl_interface = {
-        "name": "interface_test",
         "mac_address": "aa:bb:cc:dd:ee:ff",
         "virtual_interfaces": [],
     }
